@@ -1,0 +1,77 @@
+<html>
+<head>
+  <script src="./jquery.js"/></script>
+  <script src="./simple.js"/></script>
+  <meta charset="utf-8">
+  <style>
+  body{
+    font-family:"Helvetica","Univers","Helvetica Neue",arial,helvetica,sans-serif;
+    font-size:22px;
+    color:#808080;
+  }
+  a{color:steelblue;
+  }
+  input {
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    width:800px;
+    height:50px;
+    font-size:15px;
+    color:grey;
+    position:relative;
+    left:25px;
+  }
+  hr{
+    position:relative;
+    left:25px;
+  }
+  h2 {
+    color:grey;
+    position:relative;
+    left:15px;
+  }
+  h3 {
+    color:lightsteelblue;
+    position:relative;
+    left:75px;
+    font-size:17px;
+  }
+  .result{
+    color:steelblue;
+    font-size:25px;
+    position:relative;
+    left:50px;
+    max-width:750px;
+  }
+  </style>
+  <script>
+$(function() {
+
+
+  $("#pad").keyup(function(){
+    var txt=$(this).val() || ''
+    var simpled= simple(txt)
+    $("#answer").html(simpled)
+  })
+
+  $("#pad").trigger('keyup')
+
+ });
+</script>
+</head>
+<body>
+
+<h3>demo of <a href="https://github.com/spencermountain/simple_english">simple english</a> by spencer kelly</h3>
+
+ <input type="text" id="pad" style="position:relative; width:500px; height:50px; font-size:17px; color:grey;" value="well, as a matter of fact, they ran at full blast"/>
+  <div id="answer"></div>
+
+
+</body>
+</html>
+
+
+
+
+
+
